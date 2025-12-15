@@ -213,7 +213,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  width: 100px;
+
   height: 60px;
   align-items: center;
   justify-content: center;
