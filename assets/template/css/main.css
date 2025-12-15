@@ -223,7 +223,8 @@ body {
 }
  .header__logo img{
     width: 79px;
-    height: 12px;
+    height: auto;
+    z-index: 3;
   }
 .btn-download {
   text-transform: uppercase;
