@@ -98,7 +98,15 @@ Your Life Better"
                   <li class="header__nav-link">
                     <a href="#" class="nav__link">Features</a>
                   </li>
-                  <li class="background-logo"><a href="" class="header__logo"><img src="./assets/template/images/Logo.svg" alt="Appollo"></a></li>
+                  <li class="background-logo"><a href="" class="header__logo">
+                    <picture>
+              
+                   <source 
+                  srcset="assets/template/images/logo-tablet.webp" media="(min-width:767px)" type="image/webp">
+                 
+                    <img src="./assets/template/images/Logo-mobile.svg" alt="Appollo">
+                
+                  </a></li>
                 </ul>
                 <ul class="header__nav">
                   
@@ -120,7 +128,23 @@ Your Life Better"
       </header>
 
       <main>
-        <section class="hero"></section>
+        <section class="hero">
+          <div class="container">
+            <div class="hero__inner">
+              <div class="hero__card"></div>
+              <div class="hero__mobile">
+                <picture>
+                  <source 
+                  srcset="assets/template/images/hero-dekstop.webp" media="(min-width:1440px)" type="image/webp">
+                   <source 
+                  srcset="assets/template/images/hero-tablet.webp" media="(min-width:767px)" type="image/webp">
+                 <source srcset="assets/template/images/hero-dekstop.png.webp" type="image/webp">
+                 <img src="./assets/template/images/hero-mobile.png" alt="hero image" >
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   </div>
