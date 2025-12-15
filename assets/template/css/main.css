@@ -223,7 +223,7 @@ body {
 }
  .header__logo img{
     width: 79px;
-    height: auto;
+   height: 18px;
     z-index: 3;
   }
 .btn-download {
