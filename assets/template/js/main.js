@@ -1,44 +1,51 @@
-
-const langItem = document.querySelector('.menu__item-sub');
-const langBtn = langItem.querySelector('.lang-btn');
-const langMenu = langItem.querySelector('.lang-menu');
-const currentLang = langItem.querySelector('.lang-current');
-
-// Открыть / закрыть меню
-langBtn.addEventListener('click', (e) => {
-  e.stopPropagation(); // чтобы не закрывалось сразу
-  const expanded = langBtn.getAttribute('aria-expanded') === 'true';
-  langBtn.setAttribute('aria-expanded', String(!expanded));
-  langMenu.hidden = expanded; // скрываем/показываем
-  langMenu.style.visibility = expanded ? 'hidden' : 'visible';
-  langMenu.style.opacity = expanded ? '0' : '1';
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.getElementById('site-header');
+  let lastScroll = 0;
+  let lastBlurScroll = 0;
+  let ticking = false;
+  
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        const currentScroll = window.pageYOffset;
+        
+        // ВЕРСИЯ 1: Показываем header только в самом верху страницы
+        if (currentScroll <= 30) { // Если вверху страницы
+          header.classList.remove('header_hide');
+        } else {
+          // Прячем header при скролле вниз, но НЕ показываем при скролле вверх
+          if (currentScroll > lastScroll && currentScroll > 100) {
+            header.classList.add('header_hide');
+          }
+          // Показываем header только если скроллим вверх И дошли до самого верха
+          // Этот код не будет автоматически показывать header при скролле вверх
+        }
+        
+        // Плавное размытие
+        if (currentScroll > 30) {
+          if (!header.classList.contains('header_blur') && currentScroll > lastBlurScroll) {
+            header.classList.add('header_blur');
+          }
+        } else {
+          header.classList.remove('header_blur');
+        }
+        
+        lastScroll = currentScroll;
+        lastBlurScroll = currentScroll;
+        ticking = false;
+      });
+      
+      ticking = true;
+    }
+  });
+  
+  // Дополнительно: обработчик для кнопки "Наверх" если есть
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('a[href="#"]') || e.target.closest('a[href^="#top"]')) {
+      setTimeout(() => {
+        header.classList.remove('header_hide');
+        header.classList.remove('header_blur');
+      }, 100);
+    }
+  });
 });
-
-// Выбор языка
-langMenu.addEventListener('click', (e) => {
-  if (e.target.tagName === 'LI' && !e.target.classList.contains('is-active')) {
-    // Меняем активный пункт
-    langMenu.querySelector('.is-active').classList.remove('is-active');
-    e.target.classList.add('is-active');
-
-    // Меняем текст кнопки
-    currentLang.textContent = e.target.textContent;
-
-    // Закрываем меню
-    langBtn.setAttribute('aria-expanded', 'false');
-    langMenu.hidden = true;
-    langMenu.style.visibility = 'hidden';
-    langMenu.style.opacity = '0';
-  }
-});
-
-// Закрытие при клике вне меню
-document.addEventListener('click', (e) => {
-  if (!langItem.contains(e.target)) {
-    langBtn.setAttribute('aria-expanded', 'false');
-    langMenu.hidden = true;
-    langMenu.style.visibility = 'hidden';
-    langMenu.style.opacity = '0';
-  }
-});
-
