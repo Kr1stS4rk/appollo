@@ -230,15 +230,31 @@ Your Life Better"
               <div class="about__content">
                 <div class="about__img-wrap">
               
+<picture>
+  <!-- desktop -->
+  <source
+    type="image/webp"
+    media="(min-width: 1440px)"
+    srcset="./assets/template/images/about-desktop.jpg"
+  />
+  <source
+    media="(min-width: 1440px)"
+    srcset="./assets/template/images/about-desktop.jpg"
+  />
 
-                  <picture>
-                     <!-- <source srcset="about.webp" type="image/webp">  -->
-                    <img
-                      src="assets/template/images/about-desktop.jpg"
-                      alt="About Our App"
-                      srcset="./assets/template/images/about-desktop2px.jpg 2x"
-                    />
-                  </picture>
+
+  <source
+    type="image/webp"
+    srcset="./assets/template/images/about.webp"
+  />
+  <img
+    src="./assets/template/images/about.jpg"
+    alt="About our app"
+    loading="lazy"
+  />
+</picture>
+
+              
                 </div>
                 <div class="about__features">
                   <ul class="about__features-list">
