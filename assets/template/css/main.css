@@ -434,7 +434,7 @@ body {
 .about__features-item h3::before {
   content: "";
   position: absolute;
-  background: url("/assets/template/images/about-check.svg") no-repeat;
+  background: url("../images/about-check.svg") no-repeat;
   left: -42px;
   top: 2px;
   width: 24px;
