@@ -255,7 +255,7 @@ body {
   background-color: #fff;
   border-radius: 5px;
 }
-.logo{width: 78px;}
+.logo{height: 16px;width: auto;}
 .logo__bg img {
   z-index: 3;
 }
@@ -477,7 +477,8 @@ body {
     width: 100%;
     margin-block: 0;
   }
-
+.logo {
+    height: 28px;}
   .logo__bg {
     width: 200px;
     height: 90px;
