@@ -256,7 +256,6 @@ body {
   border-radius: 5px;
 }
 .logo__bg img {
-  width: 79px;
   z-index: 3;
 }
 .btn-download {
@@ -482,9 +481,7 @@ body {
     width: 200px;
     height: 90px;
   }
-  .logo__bg img {
-    width: 167px;
-  }
+ 
   .btn-download {
     font-size: 20px;
   }
