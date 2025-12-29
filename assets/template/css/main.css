@@ -253,7 +253,7 @@ body {
   background-color: #fff;
   border-radius: 5px;
 }
-.logo-bg img {
+.logo__bg img {
   width: 79px;
   z-index: 3;
 }
