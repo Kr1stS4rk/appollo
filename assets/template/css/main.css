@@ -245,9 +245,11 @@ body {
 /* logo */
 .logo__bg {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+ left: 0;
+    right: 0;
+    width: max-content;
+    margin-inline: auto;
+    top: -10px;
   height: 60px;
   padding-inline: 11px;
   background-color: #fff;
