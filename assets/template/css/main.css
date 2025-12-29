@@ -255,6 +255,7 @@ body {
   background-color: #fff;
   border-radius: 5px;
 }
+.logo{width: 78px;}
 .logo__bg img {
   z-index: 3;
 }
