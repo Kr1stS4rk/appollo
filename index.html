@@ -27,14 +27,128 @@ Your Life Better"
       content="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
 "
     />
-
+    <!-- 1. Предзагрузка шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- 2. Шрифты (подключаем рано, так как они критичны для отображения текста) -->
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Work+Sans:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- 3. Сброс стилей (reset/normalize) -->
+    <link rel="stylesheet" href="assets/template/css/reset.css" />
+
+    <!-- 4. Библиотеки и фреймворки -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- 5. Основные стили проекта -->
+    <link rel="stylesheet" href="assets/template/css/main.css" />
   </head>
+  <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="download-1" viewBox="0 0 18 18">
+    <path d="M3 14.25H15V9H16.5V15C16.5 15.1989 16.421 15.3897 16.2803 15.5303C16.1397 15.671 15.9489 15.75 15.75 15.75H2.25C2.05109 15.75 1.86032 15.671 1.71967 15.5303C1.57902 15.3897 1.5 15.1989 1.5 15V9H3V14.25ZM10.5 6.75H14.25L9 12L3.75 6.75H7.5V2.25H10.5V6.75Z" fill="currentColor"/>
+  </symbol>
+  <defs>
+    <symbol id="icon-facebook" viewBox="0 0 18 18">
+      <!-- БЕЗ clip-path и g -->
+      <path d="M10.5 10.125H12.375L13.125 7.125H10.5V5.625C10.5 4.8525 10.5 4.125 12 4.125H13.125V1.605C12.8805 1.57275 11.9572 1.5 10.9822 1.5C8.946 1.5 7.5 2.74275 7.5 5.025V7.125H5.25V10.125H7.5V16.5H10.5V10.125Z" fill="currentColor"/>
+    </symbol>
+  </defs>
+  <symbol id="icon-instagram" viewBox="0 0 18 18">
+    <path d="M9 1.5C11.0378 1.5 11.292 1.5075 12.0915 1.545C12.8903 1.5825 13.434 1.70775 13.9125 1.89375C14.4075 2.08425 14.8245 2.34225 15.2415 2.7585C15.6229 3.13342 15.918 3.58694 16.1063 4.0875C16.2915 4.56525 16.4175 5.10975 16.455 5.9085C16.4903 6.708 16.5 6.96225 16.5 9C16.5 11.0378 16.4925 11.292 16.455 12.0915C16.4175 12.8903 16.2915 13.434 16.1063 13.9125C15.9185 14.4133 15.6233 14.867 15.2415 15.2415C14.8665 15.6227 14.413 15.9178 13.9125 16.1063C13.4347 16.2915 12.8903 16.4175 12.0915 16.455C11.292 16.4903 11.0378 16.5 9 16.5C6.96225 16.5 6.708 16.4925 5.9085 16.455C5.10975 16.4175 4.566 16.2915 4.0875 16.1063C3.58674 15.9184 3.13315 15.6232 2.7585 15.2415C2.37705 14.8666 2.08195 14.4131 1.89375 13.9125C1.70775 13.4347 1.5825 12.8903 1.545 12.0915C1.50975 11.292 1.5 11.0378 1.5 9C1.5 6.96225 1.5075 6.708 1.545 5.9085C1.5825 5.109 1.70775 4.566 1.89375 4.0875C2.08143 3.58663 2.3766 3.13299 2.7585 2.7585C3.13325 2.37692 3.58682 2.0818 4.0875 1.89375C4.566 1.70775 5.109 1.5825 5.9085 1.545C6.708 1.50975 6.96225 1.5 9 1.5ZM9 5.25C8.00544 5.25 7.05161 5.64509 6.34835 6.34835C5.64509 7.05161 5.25 8.00544 5.25 9C5.25 9.99456 5.64509 10.9484 6.34835 11.6517C7.05161 12.3549 8.00544 12.75 9 12.75C9.99456 12.75 10.9484 12.3549 11.6517 11.6517C12.3549 10.9484 12.75 9.99456 12.75 9C12.75 8.00544 12.3549 7.05161 11.6517 6.34835C10.9484 5.64509 9.99456 5.25 9 5.25ZM13.875 5.0625C13.875 4.81386 13.7762 4.5754 13.6004 4.39959C13.4246 4.22377 13.1861 4.125 12.9375 4.125C12.6889 4.125 12.4504 4.22377 12.2746 4.39959C12.0988 4.5754 12 4.81386 12 5.0625C12 5.31114 12.0988 5.5496 12.2746 5.72541C12.4504 5.90123 12.6889 6 12.9375 6C13.1861 6 13.4246 5.90123 13.6004 5.72541C13.7762 5.5496 13.875 5.31114 13.875 5.0625ZM9 6.75C9.59674 6.75 10.169 6.98705 10.591 7.40901C11.0129 7.83097 11.25 8.40326 11.25 9C11.25 9.59674 11.0129 10.169 10.591 10.591C10.169 11.0129 9.59674 11.25 9 11.25C8.40326 11.25 7.83097 11.0129 7.40901 10.591C6.98705 10.169 6.75 9.59674 6.75 9C6.75 8.40326 6.98705 7.83097 7.40901 7.40901C7.83097 6.98705 8.40326 6.75 9 6.75Z" fill="currentColor"/>
+  </symbol>
+<symbol id="icon-twitter" viewBox="0 0 18 18">
+    <path d="M16.6215 4.24201C16.0489 4.49528 15.4417 4.66161 14.82 4.73551C15.4753 4.34358 15.9658 3.72677 16.2 3.00001C15.585 3.36601 14.9107 3.62251 14.208 3.76126C13.7359 3.25619 13.1102 2.92123 12.4282 2.80844C11.7461 2.69566 11.0459 2.81137 10.4364 3.1376C9.82692 3.46382 9.34227 3.98227 9.05781 4.61235C8.77336 5.24243 8.70504 5.94884 8.86348 6.62176C7.61631 6.55925 6.39623 6.23515 5.28244 5.6705C4.16866 5.10586 3.18607 4.31329 2.39848 3.34426C2.1197 3.82309 1.97319 4.36743 1.97398 4.92151C1.97398 6.00901 2.52748 6.96976 3.36898 7.53226C2.87099 7.51658 2.38395 7.38209 1.94848 7.14001V7.17901C1.94863 7.90328 2.19926 8.60522 2.65786 9.1658C3.11647 9.72638 3.75484 10.1111 4.46473 10.2548C4.00244 10.38 3.51771 10.3985 3.04723 10.3088C3.24738 10.9322 3.63748 11.4774 4.16292 11.8681C4.68836 12.2588 5.32282 12.4754 5.97748 12.4875C5.32684 12.9985 4.58186 13.3762 3.78514 13.5991C2.98842 13.822 2.15557 13.8857 1.33423 13.7865C2.768 14.7086 4.43705 15.1981 6.14173 15.1965C11.9115 15.1965 15.0667 10.4168 15.0667 6.27151C15.0667 6.13651 15.063 6.00001 15.057 5.86651C15.6711 5.42263 16.2012 4.87277 16.6222 4.24276L16.6215 4.24201Z" fill="currentColor"/>
+  </symbol>
+   <symbol id="icon-youtube" viewBox="0 0 18 18">
+    <path d="M16.1572 4.8735C16.5 6.21 16.5 9 16.5 9C16.5 9 16.5 11.79 16.1572 13.1265C15.9667 13.8653 15.4095 14.4465 14.7037 14.643C13.422 15 9 15 9 15C9 15 4.58025 15 3.29625 14.643C2.5875 14.4435 2.031 13.863 1.84275 13.1265C1.5 11.79 1.5 9 1.5 9C1.5 9 1.5 6.21 1.84275 4.8735C2.03325 4.13475 2.5905 3.5535 3.29625 3.357C4.58025 3 9 3 9 3C9 3 13.422 3 14.7037 3.357C15.4125 3.5565 15.969 4.137 16.1572 4.8735ZM7.5 11.625L12 9L7.5 6.375V11.625Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="features--feature-1" viewBox="0 0 50 50">
+  
+    <path
+      d="M41.9686 3.36926H7.98254C4.42915 3.36926 1.53809 6.26033 1.53809 9.81372V30.6125C1.53809 34.159 4.41656 37.0449 7.95965 37.0569V46.4958L21.5229 37.0578H41.9686C45.522 37.0578 48.4131 34.1667 48.4131 30.6125V9.81372C48.4131 6.26033 45.522 3.36926 41.9686 3.36926ZM35.8669 27.54H14.0842V24.7935H35.8669V27.54ZM35.8669 21.6807H14.0842V18.9341H35.8669V21.6807ZM35.8669 15.8213H14.0842V13.0747H35.8669V15.8213Z"
+      fill="currentColor" />
+  </symbol>
+
+  <symbol id="features--feature-2" viewBox="0 0 50 50">
+    <path
+      d="M22.0703 25H23.5352V23.5352C23.5352 22.7268 22.8786 22.0703 22.0703 22.0703C21.262 22.0703 20.6055 22.7268 20.6055 23.5352C20.6055 24.3435 21.262 25 22.0703 25Z"
+      fill="currentColor" />
+    <path
+      d="M23.5352 27.9297C23.2403 27.9297 18.8457 27.9297 19.1406 27.9297C18.3323 27.9297 17.6758 28.5862 17.6758 29.3945V30.8594H23.5352V27.9297Z"
+      fill="currentColor" />
+    <path
+      d="M29.3945 23.5352C29.3945 22.7268 28.738 22.0703 27.9297 22.0703C27.1214 22.0703 26.4648 22.7268 26.4648 23.5352V25H27.9297C28.738 25 29.3945 24.3435 29.3945 23.5352Z"
+      fill="currentColor" />
+    <path
+      d="M23.5352 33.7891H20.6055V39.6484H29.3945V33.7891H26.4648V35.2539C26.4648 36.0634 25.8095 36.7188 25 36.7188C24.1905 36.7188 23.5352 36.0634 23.5352 35.2539V33.7891Z"
+      fill="currentColor" />
+    <path
+      d="M0 44.043C0 46.4661 1.97144 48.4375 4.39453 48.4375H45.6055C48.0286 48.4375 50 46.4661 50 44.043V16.2109H0V44.043ZM14.7461 29.3945C14.7461 27.3689 16.1308 25.676 17.9985 25.1694C17.7944 24.6632 17.6758 24.1135 17.6758 23.5352C17.6758 21.1121 19.6472 19.1406 22.0703 19.1406C23.1998 19.1406 24.2207 19.5808 25 20.2835C25.7793 19.5808 26.8002 19.1406 27.9297 19.1406C30.3528 19.1406 32.3242 21.1121 32.3242 23.5352C32.3242 24.1135 32.2056 24.6632 32.0015 25.1694C33.8692 25.676 35.2539 27.3689 35.2539 29.3945V32.3242C35.2539 33.1337 34.5985 33.7891 33.7891 33.7891H32.3242V41.1133C32.3242 41.9228 31.6689 42.5781 30.8594 42.5781H19.1406C18.3311 42.5781 17.6758 41.9228 17.6758 41.1133V33.7891H16.2109C15.4015 33.7891 14.7461 33.1337 14.7461 32.3242V29.3945Z"
+      fill="currentColor" />
+    <path
+      d="M32.3243 29.3945C32.3243 28.5862 31.6677 27.9297 30.8594 27.9297C30.5645 27.9297 26.17 27.9297 26.4649 27.9297V30.8594H32.3243V29.3945Z"
+      fill="currentColor" />
+    <path
+      d="M45.6055 1.5625H4.39453C1.97144 1.5625 0 3.53394 0 5.95703V13.2812H50V5.95703C50 3.53394 48.0286 1.5625 45.6055 1.5625ZM7.32155 10.3516C6.51245 10.3516 5.8567 9.69582 5.8567 8.88672C5.8567 8.07762 6.51245 7.42188 7.32155 7.42188C8.13065 7.42188 8.78639 8.07762 8.78639 8.88672C8.78639 9.69582 8.13065 10.3516 7.32155 10.3516ZM13.2786 10.3516C12.4695 10.3516 11.8137 9.69582 11.8137 8.88672C11.8137 8.07762 12.4695 7.42188 13.2786 7.42188C14.0877 7.42188 14.7434 8.07762 14.7434 8.88672C14.7434 9.69582 14.0877 10.3516 13.2786 10.3516ZM19.138 10.3516C18.3289 10.3516 17.6731 9.69582 17.6731 8.88672C17.6731 8.07762 18.3289 7.42188 19.138 7.42188C19.9471 7.42188 20.6028 8.07762 20.6028 8.88672C20.6028 9.69582 19.9471 10.3516 19.138 10.3516ZM42.6758 10.3516H33.7891C32.9796 10.3516 32.3242 9.6962 32.3242 8.88672C32.3242 8.07724 32.9796 7.42188 33.7891 7.42188H42.6758C43.4853 7.42188 44.1406 8.07724 44.1406 8.88672C44.1406 9.6962 43.4853 10.3516 42.6758 10.3516Z"
+      fill="currentColor" />
+  </symbol>
+
+  <symbol id="features--feature-3" viewBox="0 0 50 50">
+   
+      <path
+        d="M48.5352 0H42.5781C41.7685 0 41.1133 0.655176 41.1133 1.46484V2.92969H29.1247C28.518 1.22832 26.9072 0 25 0C23.0928 0 21.482 1.22832 20.8753 2.92969H8.88672V1.46484C8.88672 0.655176 8.23154 0 7.42188 0H1.46484C0.655176 0 0 0.655176 0 1.46484V7.32422C0 8.13389 0.655176 8.78906 1.46484 8.78906H7.42188C8.23154 8.78906 8.88672 8.13389 8.88672 7.32422V5.83984H14.9027C9.81904 9.01572 6.46699 14.5937 6.06631 20.8413C4.30869 21.4166 3.02734 23.0527 3.02734 25C3.02734 27.4232 4.99863 29.3945 7.42188 29.3945C9.84512 29.3945 11.8164 27.4232 11.8164 25C11.8164 23.1309 10.6386 21.5417 8.99023 20.9075C9.49004 13.9422 14.3502 8.07148 21.1106 6.39648C21.8418 7.81025 23.3015 8.78906 25 8.78906C26.6985 8.78906 28.1582 7.81025 28.8894 6.39648C35.6498 8.07139 40.51 13.9421 41.0098 20.9074C39.3614 21.5417 38.1836 23.1309 38.1836 25C38.1836 27.4232 40.1549 29.3945 42.5781 29.3945C45.0014 29.3945 46.9727 27.4232 46.9727 25C46.9727 23.0527 45.6913 21.4166 43.9337 20.8413C43.533 14.5937 40.181 9.03525 35.0973 5.85938H41.1133V7.32422C41.1133 8.13389 41.7685 8.78906 42.5781 8.78906H48.5352C49.3448 8.78906 50 8.13389 50 7.32422V1.46484C50 0.655176 49.3448 0 48.5352 0Z"
+        fill="currentColor" />
+      <path
+        d="M34.9659 48.1831C34.1997 45.8385 31.9923 44.043 29.3946 44.043H20.6056C18.0079 44.043 15.8005 45.8385 15.0343 48.1831C14.7389 49.0871 15.5079 50 16.4591 50H33.5411C34.4922 50 35.2613 49.0871 34.9659 48.1831Z"
+        fill="currentColor" />
+      <path
+        d="M37.9375 30.047L26.4649 12.8379V26.7348C28.1662 27.3415 29.3945 28.9522 29.3945 30.8595C29.3945 33.2827 27.4233 35.254 25 35.254C22.5768 35.254 20.6055 33.2827 20.6055 30.8595C20.6055 28.9522 21.8338 27.3415 23.5352 26.7348V12.8379L12.0625 30.047C11.6748 30.6277 11.7521 31.4017 12.2456 31.8952C14.9348 34.5844 16.6537 38.0487 17.3171 41.7648C18.3347 41.3521 19.4414 41.1134 20.6055 41.1134H29.3945C30.5586 41.1134 31.6653 41.352 32.6829 41.7647C33.3463 38.0483 35.0652 34.5844 37.7544 31.8952C38.248 31.4017 38.3252 30.6277 37.9375 30.047Z"
+        fill="currentColor" />
+      <path
+        d="M25 29.3945C24.1918 29.3945 23.5352 30.0512 23.5352 30.8594C23.5352 31.6676 24.1918 32.3242 25 32.3242C25.8082 32.3242 26.4648 31.6676 26.4648 30.8594C26.4648 30.0512 25.8082 29.3945 25 29.3945Z"
+        fill="currentColor" />
+   
+      
+
+  </symbol>
+
+  <symbol id="features--feature-4" viewBox="0 0 50 50">
+    <path
+      d="M35.5184 0H14.4814C12.468 0 10.8428 1.63253 10.8428 3.64223V46.3614C10.8428 48.3693 12.468 50 14.4814 50H35.5184C37.5281 50 39.157 48.3693 39.157 46.3614V3.64223C39.157 1.63253 37.5281 0 35.5184 0ZM19.809 2.21194H30.1945C30.4569 2.21194 30.67 2.60367 30.67 3.08833C30.67 3.57299 30.4569 3.96655 30.1945 3.96655H19.809C19.5448 3.96655 19.3352 3.57299 19.3352 3.08833C19.3352 2.60367 19.5448 2.21194 19.809 2.21194ZM25.0017 46.4051C23.7208 46.4051 22.6786 45.3629 22.6786 44.0802C22.6786 42.7975 23.7208 41.759 25.0017 41.759C26.279 41.759 27.3212 42.7975 27.3212 44.0802C27.3212 45.3629 26.279 46.4051 25.0017 46.4051ZM36.4313 38.4447H13.5703V6.14569H36.4313V38.4447Z"
+      fill="currentColor" />
+  </symbol>
+
+
+  <symbol id="features--feature-5" viewBox="0 0 56 56">
+
+      <path
+        d="M55.7736 28.8611C49.4782 40.0098 39.0949 46.6667 27.9999 46.6667C16.9049 46.6667 6.52157 40.0098 0.226238 28.8611C-0.0747617 28.3268 -0.0747617 27.6758 0.226238 27.1414C6.52157 15.9904 16.9049 9.33342 27.9999 9.33342C39.0949 9.33342 49.4782 15.9904 55.7736 27.1391C56.0746 27.6734 56.0746 28.3268 55.7736 28.8611ZM27.9999 18.6668C22.8526 18.6668 18.6666 22.8528 18.6666 28.0001C18.6666 33.1474 22.8526 37.3334 27.9999 37.3334C33.1472 37.3334 37.3332 33.1474 37.3332 28.0001C37.3332 22.8528 33.1472 18.6668 27.9999 18.6668Z"
+        fill="currentColor" />
+      <path
+        d="M53.6666 37.3333C52.3786 37.3333 51.3333 38.3787 51.3333 39.6667V49C51.3333 50.2857 50.2856 51.3333 48.9999 51.3333H39.6666C38.3786 51.3333 37.3333 52.3787 37.3333 53.6667C37.3333 54.9547 38.3786 56 39.6666 56H48.9999C52.8593 56 55.9999 52.8593 55.9999 49V39.6667C55.9999 38.3787 54.9546 37.3333 53.6666 37.3333Z"
+        fill="currentColor" />
+
+      <path
+        d="M2.33333 37.3333C1.04533 37.3333 0 38.3787 0 39.6667V49C0 52.8593 3.14067 56 7 56H16.3333C17.6213 56 18.6667 54.9547 18.6667 53.6667C18.6667 52.3787 17.6213 51.3333 16.3333 51.3333H7C5.71433 51.3333 4.66667 50.2857 4.66667 49V39.6667C4.66667 38.3787 3.62133 37.3333 2.33333 37.3333Z"
+        fill="currentColor" />
+
+      <path
+        d="M48.9999 7.62939e-05H39.6666C38.3786 7.62939e-05 37.3333 1.04541 37.3333 2.33341C37.3333 3.62141 38.3786 4.66674 39.6666 4.66674H48.9999C50.2856 4.66674 51.3333 5.71441 51.3333 7.00008V16.3334C51.3333 17.6214 52.3786 18.6667 53.6666 18.6667C54.9546 18.6667 55.9999 17.6214 55.9999 16.3334V7.00008C55.9999 3.14074 52.8593 7.62939e-05 48.9999 7.62939e-05Z"
+        fill="currentColor" />
+
+      <path
+        d="M16.3333 7.62939e-05H7C3.14067 7.62939e-05 0 3.14074 0 7.00008V16.3334C0 17.6214 1.04533 18.6667 2.33333 18.6667C3.62133 18.6667 4.66667 17.6214 4.66667 16.3334V7.00008C4.66667 5.71441 5.71433 4.66674 7 4.66674H16.3333C17.6213 4.66674 18.6667 3.62141 18.6667 2.33341C18.6667 1.04541 17.6213 7.62939e-05 16.3333 7.62939e-05Z"
+        fill="currentColor" />
+  
+
+  </symbol>
+</svg>
   <body>
     <div class="root wrapper">
       <header class="header" id="site-header">
@@ -337,120 +451,558 @@ Your Life Better"
                   Viverra nunc ante velit vitae.
                 </p>
               </div>
-<!-- feature__list -->
+              <!-- feature__list -->
               <ul class="features__list">
-    <!-- TOP -->
-    <li class="features__item">
-      <svg class="features__icon">
-        <use href="./assets/template/sprite.svg#features--feature-1"></use>
-      </svg>
-      <h3 class="feature__name">Full free chat</h3>
-      <p class="feature__desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
-    </li>
+                <!-- TOP -->
+                <li class="features__item">
+                  <svg class="features__icon">
+                    <use
+                      href="/assets/template/sprite.svg#features--feature-1"
+                    ></use>
+                  </svg>
+                  <h3 class="feature__name">Full free chat</h3>
+                  <p class="feature__desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </li>
 
-    <!-- CENTER GROUP -->
-    <li class="features__group">
-      <!-- LEFT COLUMN -->
-      <ul class="features__column features__column--left">
-        <li class="features__item">
-          <svg class="features__icon">
-            <use href="./assets/template/sprite.svg#features--feature-2"></use>
-          </svg>
-          <h3 class="feature__name">Unlimited features</h3>
-          <p class="feature__desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </li>
+                <!-- CENTER GROUP -->
+                <li class="features__group">
+                  <!-- LEFT COLUMN -->
+                  <ul class="features__column features__column--left">
+                    <li class="features__item">
+                      <svg class="features__icon">
+                        <use
+                          href="/assets/template/sprite.svg#features--feature-2"
+                        ></use>
+                      </svg>
+                      <h3 class="feature__name">Unlimited features</h3>
+                      <p class="feature__desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                    </li>
 
-        <li class="features__item">
-          <svg class="features__icon">
-            <use href="./assets/template/sprite.svg#features--feature-3"></use>
-          </svg>
-          <h3 class="feature__name">Awesome UI design</h3>
-          <p class="feature__desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </li>
-      </ul>
+                    <li class="features__item">
+                      <svg class="features__icon">
+                        <use
+                          href="/assets/template/sprite.svg#features--feature-3"
+                        ></use>
+                      </svg>
+                      <h3 class="feature__name">Awesome UI design</h3>
+                      <p class="feature__desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                    </li>
+                  </ul>
 
-      <!-- IMAGE -->
-      <div class="features__center">
-        <picture class="features__main-img">
-          <source
-            type="image/webp"
-            srcset="
-              /assets/template/images/features__main@1x.webp 214w,
-              /assets/template/images/features__main@2x.webp 428w,
-              /assets/template/images/features__main-desktop.webp 375w,
-              /assets/template/images/features__main-desktop@2x.webp 750w
-            "
-            sizes="(min-width: 1440px) 375px, 214px"
-          />
-          <img
-            src="/assets/template/images/features__main.png"
-            srcset="
-              /assets/template/images/features__main.png 214w,
-              /assets/template/images/features__main@2x.png 428w,
-              /assets/template/images/features__main-desktop.png 375w,
-              /assets/template/images/features__main-desktop@2x.png 750w
-            "
-            sizes="(min-width: 1440px) 375px, 214px"
-            alt="App interface"
-            loading="lazy"
-          />
-        </picture>
-      </div>
+                  <!-- IMAGE -->
+                  <div class="features__center">
+                    <picture class="features__main-img">
+                      <source
+                        type="image/webp"
+                        srcset="
+                          /assets/template/images/features__main@1x.webp         214w,
+                          /assets/template/images/features__main@2x.webp         428w,
+                          /assets/template/images/features__main-desktop.webp    375w,
+                          /assets/template/images/features__main-desktop@2x.webp 750w
+                        "
+                        sizes="(min-width: 1440px) 375px, 214px"
+                      />
+                      <img
+                        src="/assets/template/images/features__main.png"
+                        srcset="
+                          /assets/template/images/features__main.png            214w,
+                          /assets/template/images/features__main@2x.png         428w,
+                          /assets/template/images/features__main-desktop.png    375w,
+                          /assets/template/images/features__main-desktop@2x.png 750w
+                        "
+                        sizes="(min-width: 1440px) 375px, 214px"
+                        alt="App interface"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </div>
 
-      <!-- RIGHT COLUMN -->
-      <ul class="features__column features__column--right">
-        <li class="features__item">
-          <svg class="features__icon">
-            <use href="./assets/template/sprite.svg#features--feature-4"></use>
-          </svg>
-          <h3 class="feature__name">iOS & Android </h3>
-          <p class="feature__desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </li>
+                  <!-- RIGHT COLUMN -->
+                  <ul class="features__column features__column--right">
+                    <li class="features__item">
+                      <svg class="features__icon">
+                        <use
+                          href="/assets/template/sprite.svg#features--feature-4"
+                        ></use>
+                      </svg>
+                      <h3 class="feature__name">iOS & Android</h3>
+                      <p class="feature__desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                    </li>
 
-        <li class="features__item">
-          <svg class="features__icon">
-            <use href="./assets/template/sprite.svg#features--feature-5"></use>
-          </svg>
-          <h3 class="feature__name">Retina graphics</h3>
-          <p class="feature__desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </li>
-      </ul>
-    </li>
+                    <li class="features__item">
+                      <svg class="features__icon">
+                        <use
+                          href="/assets/template/sprite.svg#features--feature-5"
+                        ></use>
+                      </svg>
+                      <h3 class="feature__name">Retina graphics</h3>
+                      <p class="feature__desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                    </li>
+                  </ul>
+                </li>
 
-    <!-- BOTTOM -->
-    <li class="features__item feature-bottom">
-      <svg class="features__icon">
-        <use href="./assets/template/sprite.svg#features--feature-6"></use>
-      </svg>
-      <h3 class="feature__name">24/7 support by real people</h3>
-      <p class="feature__desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
-    </li>
-  </ul>
-
+                <!-- BOTTOM -->
+                <li class="features__item feature-bottom">
+                  <svg class="features__icon">
+                    <use
+                      href="/assets/template/sprite.svg#features--feature-6"
+                    ></use>
+                  </svg>
+                  <h3 class="feature__name">24/7 support by real people</h3>
+                  <p class="feature__desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
-    <ul>
-  <li><a href="#example1">Open example #1</a></li>
-  <li><a href="#example2">Open example #2</a></li>
-</ul>
+        <section class="checkout section" style="color: black">
+          <div class="container checkout__container">
+            <div class="checkout__inner section__inner">
+              <div class="checkout__text-block text-block">
+                <h2 class="checkout__title section__title">
+                  Checkout Our App Interface Look
+                </h2>
+                <p
+                  class="checkout__desc section__desc"
+                  data-text-tablet="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus."
+                  data-text-desktop="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat."
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Viverra nunc ante velit vitae.
+                </p>
+              </div>
+              <!-- < img src="/assets/template/images/checkout/checkout-image.png" alt="" />-->
+               <div class="swiper__container">
+  <div class="swiper" aria-label="">
+            <div class="swiper-wrapper">
+
+                <!-- Слайд 1 -->
+                <div class="swiper-slide">
+                    <div class="swiper-card">
+                        <picture>
+  <source srcset="./assets/template/images/checkout/chekout-image-desktop.png" media="(min-width: 1440px)">
+  <img src="/assets/template/images/checkout/checkout-image.png" alt="">
+</picture>
+                       
+                    </div>
+                </div>
+ <!-- Слайд 1 -->
+                <div class="swiper-slide">
+                    <div class="swiper-card">
+                        <picture>
+  <source srcset="./assets/template/images/checkout/chekout-image-desktop.png" media="(min-width: 1440px)">
+  <img src="/assets/template/images/checkout/checkout-image.png" alt="">
+</picture>
+                       
+                    </div>
+                </div>
+ <!-- Слайд 1 -->
+                <div class="swiper-slide">
+                    <div class="swiper-card">
+                        <picture>
+  <source srcset="./assets/template/images/checkout/chekout-image-desktop.png" media="(min-width: 1440px)">
+  <img src="/assets/template/images/checkout/checkout-image.png" alt="">
+</picture>
+                       
+                    </div>
+                </div>
+ <!-- Слайд 1 -->
+                <div class="swiper-slide">
+                    <div class="swiper-card">
+                        <picture>
+  <source srcset="./assets/template/images/checkout/chekout-image-desktop.png" media="(min-width: 1440px)">
+  <img src="/assets/template/images/checkout/checkout-image.png" alt="">
+</picture>
+                       
+                    </div>
+                </div>
+
+ <!-- Слайд 1 -->
+                <div class="swiper-slide">
+                    <div class="swiper-card">
+                        <picture>
+  <source srcset="./assets/template/images/checkout/chekout-image-desktop.png" media="(min-width: 1440px)">
+  <img src="/assets/template/images/checkout/checkout-image.png" alt="">
+</picture>
+                       
+                    </div>
+                </div>
+
+                
 
 
+              
 
+            </div>
+ 
+            <!-- Элементы управления: стрелки и точки-индикаторы -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+         </div>
+            </div>
+          </div>
+        </section>
+        <section class="download ">
+<div class="container download__container">
+  <div class="download__inner section__inner">
+    <div class="download__content">
+<div class="download__text-block text__block">
+                <h2 class="download__title section__title">Download App Now</h2>
+                <p
+                  class="download__desc section__desc"
+                  data-text-tablet="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.."
+                  data-text-desktop="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat."
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Viverra nunc ante velit vitae.
+                </p>
+              </div>
+              <div class="app-stores download__app-stores flex">
+                  <a
+                    class="app-stores__link"
+                    href="https://play.google.com/store/apps"
+                    aria-label="Download on Google Play"
+                  >
+                    <picture>
+                      <source
+                        srcset="
+                          /assets/template/images/google-play.webp    1x,
+                          /assets/template/images/google-play@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <img
+                        src="/assets/template/images/google-play.png"
+                        srcset="./assets/template/images/google-play@2x.png 2x"
+                        width="149"
+                        height="47"
+                        alt="Download on Google Play"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </a>
+                  <a
+                    class="app-stores__link"
+                    href="https://www.apple.com/app-store/"
+                    aria-label="Download on App store"
+                  >
+                    <picture>
+                      <!-- WebP (приоритет) -->
+                      <source
+                        srcset="
+                          /assets/template/images/app-store.webp    1x,
+                          /assets/template/images/app-store@2x.webp 2x
+                        "
+                        type="image/webp"
+                      />
+                      <!-- Fallback PNG -->
+                      <img
+                        src="/assets/template/images/app-store.png"
+                        srcset="./assets/template/images/app-store@2x.png 2x"
+                        width="151"
+                        height="45"
+                        alt="Download on the App Store"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </a>
+                </div>
+                <ul class="download__list">
+                  <li class="download__item">
+                      <svg class="download__icon" width="18" height="18" fill="red">
+      <use href="#download-1"></use>
+    </svg>
+    <strong class="download__count">59865</strong>
+    <span class="download__label">Download</span>
+                  </li>
+                   <li class="download__item">
+                      <svg class="download__icon" width="18" height="18" fill="red">
+      <use href="#download-1"></use>
+    </svg>
+    <strong class="download__count">29852</strong>
+    <span class="download__label">Like</span>
+                  </li>
+                   <li class="download__item">
+                      <svg class="download__icon" width="18" height="18" fill="red">
+      <use href="#download-1"></use>
+    </svg>
+    <strong class="download__count">1500</strong>
+    <span class="download__label">5 star rating</span>
+                  </li>
+                </ul>
+  </div>
+  <div class="download__image">
+
+  </div>
+  </div>
+</div>
+        </section>
+      <section class="guide section">
+        <div class="container guide__container">
+          <div class="guide__inner section__inner">
+           <div class="guide__text-block text__block">
+                <h2 class="guide__title section__title">how to use the app perfectly</h2>
+                <p
+                  class="guide__desc section__desc"
+                  data-text-tablet="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.."
+                  data-text-desktop="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat."
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Viverra nunc ante velit vitae.
+                </p>
+              </div>
+              <div class="guide__video-wrap">
+              <div class="guide__video"
+               data-poster="/assets/template/images/video-guide.png"
+               data-poster-768="/assets/template/images/video-guide-768.png"
+     data-poster-1440="/assets/template/images/video-guide-1440.png">
+  <video class="guide__video-card"  preload="none" playsinline controls>
+    <source data-src="/assets/template/images/video/2026-01-30-17-22-13.mp4" type="video/mp4" />
+  </video>
+  <span class="video__overlay"></span>
+  <button class="guide__video-play" type="button" aria-label="Воспроизвести видео">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_152_281)">
+<path d="M3 3.993C3 3.445 3.445 3 3.993 3H20.007C20.555 3 21 3.445 21 3.993V20.007C20.9997 20.2703 20.895 20.5227 20.7089 20.7089C20.5227 20.895 20.2703 20.9997 20.007 21H3.993C3.72972 20.9997 3.4773 20.895 3.29114 20.7089C3.10497 20.5227 3.00026 20.2703 3 20.007V3.993ZM10.622 8.415C10.5618 8.37485 10.4919 8.35177 10.4196 8.34822C10.3473 8.34467 10.2755 8.36079 10.2116 8.39486C10.1478 8.42893 10.0944 8.47967 10.0572 8.54168C10.0199 8.60369 10.0001 8.67465 10 8.747V15.253C10.0001 15.3253 10.0199 15.3963 10.0572 15.4583C10.0944 15.5203 10.1478 15.5711 10.2116 15.6051C10.2755 15.6392 10.3473 15.6553 10.4196 15.6518C10.4919 15.6482 10.5618 15.6252 10.622 15.585L15.501 12.333C15.5559 12.2965 15.6009 12.247 15.632 12.1889C15.6631 12.1308 15.6794 12.0659 15.6794 12C15.6794 11.9341 15.6631 11.8692 15.632 11.8111C15.6009 11.753 15.5559 11.7035 15.501 11.667L10.621 8.415H10.622Z" fill="#5956E9"/>
+</g>
+<defs>
+<clipPath id="clip0_152_281">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+
+  </button>
+</div>
+</div>
+          </div>
+        </div>
+      </section>
+     </section>
+      <section class="team section">
+<div class="container team__container">
+  <div class="team__inner section__inner">
+    <div class="team__text-block text__block">
+                <h2 class="team__title section__title">Our reative team</h2>
+                <p
+                  class="team__desc section__desc"
+                  data-text-tablet="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.."
+                  data-text-desktop="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat."
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Viverra nunc ante velit vitae.
+                </p>
+              </div>
+              <ul class="team__list">
+                <li class="team__item">
+                  
+                  <div class="team__user">
+
+
+  <div class="team__photo-wrapper">
+    <picture>
+      <!-- <source srcset="/assets/template/images/team-user-1.webp"> -->
+       <img src="/assets/template/images/team-user-1.jpg" alt="Carla Press" class="team__user-photo" width="195" height="195" loading="lazy">
+    </picture>
+  </div>
+
+                    <div class="team__user-content">
+                      <h4 class="team__user-name">Carla Press</h4>
+                      <p class="team__user-job">App Developer</p>
+                      <p class="team__user-descp section__desc"  data-text-tablet="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                                        data-text-desktop="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+                                        </p>
+                    </div>
+                  
+                    
+                  </div>
+                 <ul class="team__social">
+                <li class="team__social-item">
+                <a href="#" class="team__social-link" aria-label="Facebook">
+  <svg width="18" height="18" viewBox="0 0 18 18">
+    <use href="#icon-facebook"></use>
+  </svg>
+</a>
+
+                 
+                </li>
+                 <span class="team__social-divider" aria-hidden="true"></span>
+                <li class="team__social-item">
+  <a href="#" class="team__social-link" aria-label="Twitter">
+    <svg width="18" height="18" viewBox="0 0 18 18">
+      <use href="#icon-twitter"></use>
+    </svg>
+  </a>
+</li>
+ <span class="team__social-divider" aria-hidden="true"></span>
+<li class="team__social-item">
+  <a href="#" class="team__social-link" aria-label="Instagram">
+    <svg width="18" height="18" viewBox="0 0 18 18">
+      <use href="#icon-instagram"></use>
+    </svg>
+  </a>
+</li>
+ <span class="team__social-divider" aria-hidden="true"></span>
+<li class="team__social-item">
+  <a href="#" class="team__social-link" aria-label="YouTube">
+    <svg width="18" height="18" viewBox="0 0 18 18">
+      <use href="#icon-youtube"></use>
+    </svg>
+  </a>
+</li>
+              </ul> 
+                </li>
+
+  <li class="team__item">
+                  
+                  <div class="team__user">
+
+
+  <div class="team__photo-wrapper">
+    <picture>
+      <!-- <source srcset="/assets/template/images/team-user-1.webp"> -->
+       <img src="/assets/template/images/team-user-1.jpg" alt="Carla Press" class="team__user-photo" width="195" height="195" loading="lazy">
+    </picture>
+  </div>
+
+                    <div class="team__user-content">
+                      <h4 class="team__user-name">Graig fouse</h4>
+                      <p class="team__user-job">App Developer</p>
+                      <p class="team__user-descp section__desc"  data-text-tablet="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                                        data-text-desktop="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+                                        </p>
+                    </div>
+                  
+                    
+                  </div>
+                 <ul class="team__social">
+                <li class="team__social-item">
+                <a href="#" class="team__social-link" aria-label="Facebook">
+  <svg width="18" height="18" viewBox="0 0 18 18">
+    <use href="#icon-facebook"></use>
+  </svg>
+</a>
+
+                 
+                </li>
+                 <span class="team__social-divider" aria-hidden="true"></span>
+                <li class="team__social-item">
+  <a href="#" class="team__social-link" aria-label="Twitter">
+    <svg width="18" height="18" viewBox="0 0 18 18">
+      <use href="#icon-twitter"></use>
+    </svg>
+  </a>
+</li>
+ <span class="team__social-divider" aria-hidden="true"></span>
+<li class="team__social-item">
+  <a href="#" class="team__social-link" aria-label="Instagram">
+    <svg width="18" height="18" viewBox="0 0 18 18">
+      <use href="#icon-instagram"></use>
+    </svg>
+  </a>
+</li>
+ <span class="team__social-divider" aria-hidden="true"></span>
+<li class="team__social-item">
+  <a href="#" class="team__social-link" aria-label="YouTube">
+    <svg width="18" height="18" viewBox="0 0 18 18">
+      <use href="#icon-youtube"></use>
+    </svg>
+  </a>
+</li>
+              </ul> 
+                </li>
+                  <li class="team__item">
+                  
+                  <div class="team__user">
+
+
+  <div class="team__photo-wrapper">
+    <picture>
+      <!-- <source srcset="/assets/template/images/team-user-1.webp"> -->
+       <img src="/assets/template/images/team-user-1.jpg" alt="Carla Press" class="team__user-photo" width="195" height="195" loading="lazy">
+    </picture>
+  </div>
+
+                    <div class="team__user-content">
+                      <h4 class="team__user-name">Carla Press</h4>
+                      <p class="team__user-job">App Developer</p>
+                      <p class="team__user-descp section__desc"  data-text-tablet="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                                        data-text-desktop="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+                                        </p>
+                    </div>
+                  
+                    
+                  </div>
+                 <ul class="team__social">
+                <li class="team__social-item">
+                <a href="#" class="team__social-link" aria-label="Facebook">
+  <svg width="18" height="18" viewBox="0 0 18 18">
+    <use href="#icon-facebook"></use>
+  </svg>
+</a>
+
+                 
+                </li>
+                 <span class="team__social-divider" aria-hidden="true"></span>
+                <li class="team__social-item">
+  <a href="#" class="team__social-link" aria-label="Twitter">
+    <svg width="18" height="18" viewBox="0 0 18 18">
+      <use href="#icon-twitter"></use>
+    </svg>
+  </a>
+</li>
+ <span class="team__social-divider" aria-hidden="true"></span>
+<li class="team__social-item">
+  <a href="#" class="team__social-link" aria-label="Instagram">
+    <svg width="18" height="18" viewBox="0 0 18 18">
+      <use href="#icon-instagram"></use>
+    </svg>
+  </a>
+</li>
+ <span class="team__social-divider" aria-hidden="true"></span>
+<li class="team__social-item">
+  <a href="#" class="team__social-link" aria-label="YouTube">
+    <svg width="18" height="18" viewBox="0 0 18 18">
+      <use href="#icon-youtube"></use>
+    </svg>
+  </a>
+</li>
+              </ul> 
+                </li>
+              </ul>
+  </div>
+</div>
+      </section>
       </main>
     </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/template/js/main.js"></script>
   </body>
 </html>
