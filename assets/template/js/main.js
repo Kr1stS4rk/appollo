@@ -228,3 +228,107 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+const cards = document.querySelectorAll(".card")
+const dotsContainer = document.querySelector(".dots")
+
+let active = 1
+
+/* --- create dots --- */
+cards.forEach((_,i)=>{
+  const dot = document.createElement("span")
+  dot.className="dot"
+  dot.onclick = ()=> {
+    active = i
+    update()
+  }
+  dotsContainer.appendChild(dot)
+})
+
+const dots = document.querySelectorAll(".dot")
+
+/* --- coverflow logic --- */
+function update(){
+  // Всегда показываем 3 карточки: активную и две соседние
+  cards.forEach((card,i)=>{
+    // Рассчитываем смещение с учетом бесконечной прокрутки
+    let offset = i - active
+    
+    // Если offset слишком большой, корректируем для бесконечности
+    if (offset < -1) offset += cards.length
+    if (offset > 1) offset -= cards.length
+    
+    // Показываем только карточки в пределах ±1 от активной
+    if (Math.abs(offset) > 1) {
+      card.style.opacity = "0"
+      card.style.visibility = "hidden"
+      return
+    }
+    
+    card.style.visibility = "visible"
+
+    let abs = Math.abs(offset)
+    let scale = 1 - abs * 0.15
+    let rotateY = offset * -35
+    let zIndex = 100 - abs
+    let opacity = 1 - abs * 0.3
+    
+    // Смещение в процентах от ширины контейнера слайдера
+    // slider width = 1200px, card width = 900px
+    // Чтобы карточки были наполовину перекрыты, смещаем на 75% ширины слайдера
+    // (900px / 1200px = 0.75 = 75%)
+    let translateXPercent = offset * 50; // 75% от ширины слайдера
+
+    card.style.transform = `
+      translate(-50%,-50%)
+      translateX(${translateXPercent}%)
+      rotateY(${rotateY}deg)
+      scale(${scale})
+    `
+
+    card.style.zIndex = zIndex
+    card.style.opacity = opacity
+  })
+
+  dots.forEach((dot,i)=>{
+    dot.classList.toggle("active", i === active)
+  })
+}
+
+// Инициализация для отображения 3 карточек при загрузке
+update()
+
+/* --- click cards --- */
+cards.forEach((card,i)=>{
+  card.addEventListener("click",()=>{
+    active = i
+    update()
+  })
+})
+
+/* --- добавление кнопок навигации --- */
+const prevBtn = document.querySelector(".swiper-button-prev")
+const nextBtn = document.querySelector(".swiper-button-next")
+
+if (prevBtn) {
+  prevBtn.onclick = () => {
+    active--
+    if (active < 0) active = cards.length - 1
+    update()
+  }
+}
+
+if (nextBtn) {
+  nextBtn.onclick = () => {
+    active++
+    if (active >= cards.length) active = 0
+    update()
+  }
+}
+
+/* --- добавление обработчиков для точек --- */
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    active = i
+    update()
+  })
+})
